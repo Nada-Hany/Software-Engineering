@@ -47,7 +47,7 @@
 ### Lossia Awney
 ### Mai Ezz
 ### Salma Emad
-
+### -----------------------------------------------------------------------------------------
 ## Notes
 ### Ensure the Oracle database is running and accessible before launching the application.
 ### The system supports both Arabic and English interfaces, as specified in the non-functional requirements.
