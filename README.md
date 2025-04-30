@@ -50,5 +50,5 @@
 ### -----------------------------------------------------------------------------------------
 ## Notes
 ### Ensure the Oracle database is running and accessible before launching the application.
-### The system supports both Arabic and English interfaces, as specified in the non-functional requirements.
+### The system supports English interfaces, as specified in the non-functional requirements.
 ### For any issues, contact the team leader or the assigned TA.
