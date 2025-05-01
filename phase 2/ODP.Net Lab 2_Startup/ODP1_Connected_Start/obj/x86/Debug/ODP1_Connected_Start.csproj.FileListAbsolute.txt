@@ -71,3 +71,16 @@ C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected
 C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.csproj.CoreCompileInputs.cache
 C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.exe
 C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.pdb
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\bin\Debug\ODP1_Connected_Start.exe.config
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\bin\Debug\ODP1_Connected_Start.exe
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\bin\Debug\ODP1_Connected_Start.pdb
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.csproj.AssemblyReference.cache
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.adminForm.resources
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.LoginForm.resources
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.MainMenuForm.resources
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.MoviesForm.resources
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.Properties.Resources.resources
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.csproj.GenerateResource.cache
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.csproj.CoreCompileInputs.cache
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.exe
+D:\FCIS\Level-3\Semester 6\Current Courses\SWE\SWE_Project\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.pdb

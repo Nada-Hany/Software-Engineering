@@ -9,7 +9,8 @@ namespace ODP1_Connected_Start
 {
     public partial class MoviesForm : Form
     {
-        private string ordb = "data source=orcl; user id=scott; password=tiger;";
+        private string ordb = "data source=orcl; user id=hr; password=hr;";
+        //private string ordb = "data source=orcl; user id=scott; password=tiger;";
         private OracleConnection conn;
         private int userID;
         HelperFunctions helper;
@@ -129,6 +130,11 @@ namespace ODP1_Connected_Start
         
         // dates combo box
         private void show_date_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

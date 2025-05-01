@@ -13,7 +13,8 @@ namespace ODP1_Connected_Start
 {
     public partial class LoginForm : Form
     {
-        string ordb = "data source=orcl; user id=scott; password=tiger;";
+        string ordb = "data source=orcl; user id=hr; password=hr;";
+        //string ordb = "data source=orcl; user id=scott; password=tiger;";
         OracleConnection conn;
         HelperFunctions helper;
         public LoginForm()

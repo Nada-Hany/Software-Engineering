@@ -73,6 +73,7 @@
             this.Controls.Add(this.button1);
             this.Name = "MainMenuForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.ResumeLayout(false);
 
         }

@@ -15,7 +15,8 @@ namespace ODP1_Connected_Start
 {
     public partial class adminForm : Form
     {
-        string ordb = "data source=orcl; user id=scott; password=tiger;";
+        string ordb = "data source=orcl; user id=hr; password=hr;";
+        //string ordb = "data source=orcl; user id=scott; password=tiger;";
         OracleConnection conn;
 
         public adminForm()
@@ -39,10 +40,26 @@ namespace ODP1_Connected_Start
             while (dr.Read())
             {
                 comboBox1.Items.Add(dr[0]);
-                //MessageBox.Show("cat inserted successfully!");
+                MessageBox.Show("categ inserted successfully!");
             }
             dr.Close();
             panel2.BringToFront();
+
+
+            //OracleCommand cmd2 = new OracleCommand();
+            //cmd2.Connection = conn;
+            //cmd2.CommandText = "select MovieID from Movies";
+            //cmd2.CommandType = CommandType.Text;
+
+            //OracleDataReader dr2 = cmd2.ExecuteReader();
+            
+            //while (dr2.Read())
+            //{
+            //    comboBox2.Items.Add(dr2[0]);
+            //    MessageBox.Show("cat inserted successfully!");
+            //}
+            //dr2.Close();
+
 
         }
 
@@ -78,20 +95,19 @@ namespace ODP1_Connected_Start
         {
             dateTimePicker3.Format = DateTimePickerFormat.Time;
             dateTimePicker3.ShowUpDown = true;
-
+            conn = new OracleConnection(ordb);
+            conn.Open();
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select MovieName from Movies";
+            cmd.CommandText = "select MovieID from Movies";
             cmd.CommandType = CommandType.Text;
 
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 comboBox2.Items.Add(dr[0]);
-                MessageBox.Show("names inserted successfully!");
             }
             dr.Close();
-            MessageBox.Show("noooo names inserted successfully!");
             panel4.BringToFront();
         }
 
@@ -121,20 +137,7 @@ namespace ODP1_Connected_Start
             panel5.BringToFront();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn;
-            cmd.CommandText = "INSERT INTO Movies (MovieID,MovieName, MovieDuration, MovieRate, ReleaseDate, MovieCategoryID) VALUES(MovieID_Seq.NEXTVAL,:MovieName, :MovieDuration, :MovieRate, :ReleaseDate, :MovieCategoryID)";
-
-            cmd.Parameters.Add("MovieName", textBox1.Text);
-            cmd.Parameters.Add("MovieDuration", textBox2.Text);
-            cmd.Parameters.Add("MovieRate", textBox3.Text);
-            cmd.Parameters.Add("ReleaseDate", dateTimePicker1.Value); // Directly pass DateTime
-            cmd.Parameters.Add("MovieCategoryID", comboBox1.Text);
-            int r = cmd.ExecuteNonQuery();
-            if (r != -1) MessageBox.Show("Movie inserted successfully!");
-        }
+      
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -146,15 +149,22 @@ namespace ODP1_Connected_Start
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "INSERT INTO Shows (ShowID, MovieName, ShowDayDate, startTime, numberOfSeats, available_seats, Price) VALUES(ShowId_Seq.NEXTVAL, :MovieName, :ShowDayDate, :startTime, :numberOfSeats, :numberOfSeats, :Price)";
+            cmd.BindByName = true;
+            cmd.CommandText = "INSERT INTO Shows (ShowID, MovieID, ShowDayDate, startTime, numberOfSeats, available_seats, Price) VALUES (ShowId_Seq.NEXTVAL, :MovieID, :ShowDayDate, :startTime, :numberOfSeats, :avaSeats, :Price)";
 
-            cmd.Parameters.Add("MovieName", comboBox2.Text);
-            cmd.Parameters.Add("numberOfSeats", textBox4.Text);
-            cmd.Parameters.Add("Price", textBox5.Text);
-            cmd.Parameters.Add("ShowDayDate", dateTimePicker2.Value.Date); // Directly pass DateTime
-            cmd.Parameters.Add("startTime", dateTimePicker3.Value.TimeOfDay);
+            DateTime showDate = dateTimePicker2.Value.Date;
+            DateTime startDateTime = showDate + dateTimePicker3.Value.TimeOfDay;
+
+            cmd.Parameters.Add("MovieID", comboBox2.Text);
+            cmd.Parameters.Add("ShowDayDate", showDate);
+            cmd.Parameters.Add("startTime", startDateTime);
+            cmd.Parameters.Add("numberOfSeats", Convert.ToInt32(textBox4.Text));
+            cmd.Parameters.Add("avaSeats", Convert.ToInt32(textBox4.Text));
+            cmd.Parameters.Add("Price", Convert.ToDecimal(textBox5.Text));
+
             int r = cmd.ExecuteNonQuery();
-            if (r != -1) MessageBox.Show("show inserted successfully!");
+            if (r != -1)
+                MessageBox.Show("Show inserted successfully!");
         }
 
         private void button9_Click_1(object sender, EventArgs e)
@@ -180,14 +190,13 @@ namespace ODP1_Connected_Start
             dateTimePicker3.ShowUpDown = true;
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select MovieName from Movies";
+            cmd.CommandText = "select MovieID from Movies";
             cmd.CommandType = CommandType.Text;
 
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 comboBox2.Items.Add(dr[0]);
-                //MessageBox.Show("names inserted successfully!");
             }
             dr.Close();
 
@@ -211,5 +220,22 @@ namespace ODP1_Connected_Start
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "INSERT INTO Movies (MovieID,MovieName, MovieDuration, MovieRate, ReleaseDate, MovieCategoryID) VALUES(MovieID_Seq.NEXTVAL,:MovieName, :MovieDuration, :MovieRate, :ReleaseDate, :MovieCategoryID)";
+
+            cmd.Parameters.Add("MovieName", textBox1.Text);
+            cmd.Parameters.Add("MovieDuration", textBox2.Text);
+            cmd.Parameters.Add("MovieRate", textBox3.Text);
+            cmd.Parameters.Add("ReleaseDate", dateTimePicker1.Value); // Directly pass DateTime
+            cmd.Parameters.Add("MovieCategoryID", comboBox1.Text);
+            int r = cmd.ExecuteNonQuery();
+            if (r != -1) MessageBox.Show("Movie inserted successfully!");
+        
+    }
     }
 }
