@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\programming\\Software-Engineering\\phase 2\\ODP.Net Lab 2_Startup\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DACFB870-5F0D-4F01-9160-28231C1176D6}|ODP1_Connected_Start\\ODP1_Connected_Start.csproj|C:\\programming\\Software-Engineering\\phase 2\\ODP.Net Lab 2_Startup\\odp1_connected_start\\moviesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DACFB870-5F0D-4F01-9160-28231C1176D6}|ODP1_Connected_Start\\ODP1_Connected_Start.csproj|c:\\programming\\software-engineering\\phase 2\\odp.net lab 2_startup\\odp1_connected_start\\moviesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DACFB870-5F0D-4F01-9160-28231C1176D6}|ODP1_Connected_Start\\ODP1_Connected_Start.csproj|solutionrelative:odp1_connected_start\\moviesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -66,8 +66,7 @@
               "RelativeToolTip": "ODP1_Connected_Start\\LoginForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T21:06:06.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T21:06:06.801Z"
             },
             {
               "$type": "Document",
@@ -77,7 +76,7 @@
               "RelativeDocumentMoniker": "ODP1_Connected_Start\\MoviesForm.cs",
               "ToolTip": "C:\\programming\\Software-Engineering\\phase 2\\ODP.Net Lab 2_Startup\\ODP1_Connected_Start\\MoviesForm.cs",
               "RelativeToolTip": "ODP1_Connected_Start\\MoviesForm.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAIwHQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAIwHMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T19:49:43.317Z",
               "EditorCaption": ""
@@ -91,8 +90,7 @@
               "ToolTip": "C:\\programming\\Software-Engineering\\phase 2\\ODP.Net Lab 2_Startup\\ODP1_Connected_Start\\MoviesForm.cs [Design]",
               "RelativeToolTip": "ODP1_Connected_Start\\MoviesForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:57:42.954Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-28T12:57:42.954Z"
             },
             {
               "$type": "Document",
@@ -104,8 +102,7 @@
               "RelativeToolTip": "ODP1_Connected_Start\\HelperFunctions.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAowDwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T11:58:43.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T11:58:43.135Z"
             },
             {
               "$type": "Document",
@@ -117,8 +114,7 @@
               "RelativeToolTip": "ODP1_Connected_Start\\LoginForm.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAkwBEAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T09:03:49.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T09:03:49.636Z"
             },
             {
               "$type": "Document",
@@ -129,8 +125,7 @@
               "ToolTip": "C:\\programming\\Software-Engineering\\phase 2\\ODP.Net Lab 2_Startup\\ODP1_Connected_Start\\LoginForm.cs [Design]",
               "RelativeToolTip": "ODP1_Connected_Start\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T09:03:47.155Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-28T09:03:47.155Z"
             },
             {
               "$type": "Document",

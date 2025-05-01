@@ -88,7 +88,8 @@ namespace ODP1_Connected_Start
 
             while (showsReader.Read())
             {
-                show_date_cmb.Items.Add(showsReader[2]);
+               // MessageBox.Show(showsReader[2]);
+                show_date_cmb.Items.Add(showsReader[2].ToString());
             }
 
         }

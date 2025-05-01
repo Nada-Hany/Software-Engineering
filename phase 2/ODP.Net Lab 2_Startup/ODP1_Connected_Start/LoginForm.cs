@@ -59,9 +59,10 @@ namespace ODP1_Connected_Start
 
                 if (userID != -1)
                 {
-                    MoviesForm moviesForm = new MoviesForm(userID);
+                  //  MoviesForm moviesForm = new MoviesForm(userID);
+                    MainMenuForm mainMenuForm = new MainMenuForm();
                     this.Hide(); // Hide LoginForm
-                    moviesForm.Show();
+                    mainMenuForm.Show();
                 }
                 else
                 {
