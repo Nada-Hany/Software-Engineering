@@ -33,5 +33,10 @@ namespace ODP1_Connected_Start
         {
 
         }
+
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
