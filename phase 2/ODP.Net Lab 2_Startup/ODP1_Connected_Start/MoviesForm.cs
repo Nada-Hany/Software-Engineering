@@ -12,11 +12,16 @@ namespace ODP1_Connected_Start
         private string ordb = "data source=orcl; user id=scott; password=tiger;";
         private OracleConnection conn;
         private int userID;
-
+        HelperFunctions helper;
+        DataTable dt;
+        OracleDataReader showsReader;
         public MoviesForm(int userID)
         {
             InitializeComponent();
-            this.userID = userID; 
+            conn = new OracleConnection(ordb);
+            conn.Open();
+            this.userID = userID;
+            category_txt.Hide();
         }
         public MoviesForm()
         {
@@ -26,24 +31,27 @@ namespace ODP1_Connected_Start
 
         private void MoviesForm_Load_1(object sender, EventArgs e)
         {
-            conn = new OracleConnection(ordb);
-            conn.Open();
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "GetMoviesByCategory";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("p_categoryID", OracleDbType.Int32).Value = Convert.ToInt32(categoryComboBox.SelectedIndex);
-            cmd.Parameters.Add("p_movies_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
-            if (conn.State != ConnectionState.Open)
-                conn.Open();
-            OracleDataReader dr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-          
+
+            helper = new HelperFunctions();
+            OracleDataReader dr = helper.RetrieveAllMovies(ref cmd);
+
+
+            dt = new DataTable();
+            
             dt.Load(dr);
             dataGridView1.DataSource = dt;
+            dataGridView1.ReadOnly = true;
+
+            // filling movie name in a combo box 
+            foreach (DataRow row in dt.Rows)
+                movie_names_cmb.Items.Add(row[1].ToString());
+
             dr.Close();
         }
+
 
 
 
@@ -53,24 +61,76 @@ namespace ODP1_Connected_Start
         }
 
        
+        private string getCategorySelected(string name)
+        {
+            string cat = "N/A";
+            foreach (DataRow row in dt.Rows)
+            {
+                if (row[1].ToString() == name)
+                    return row[5].ToString();
+            }
+            return cat;
+        }
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Check if a valid category is selected
-            if (categoryComboBox.SelectedValue == null || categoryComboBox.SelectedIndex == -1)
-                return;
-
-            int categoryID;
-            try
+            category_txt.Show();
+            string movieName = movie_names_cmb.SelectedItem?.ToString();
+            if (!string.IsNullOrEmpty(movieName))
             {
-                categoryID = Convert.ToInt32(categoryComboBox.SelectedValue);
+                category_txt.Text += getCategorySelected(movieName);
             }
-            catch
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+
+
+            showsReader = helper.RetrieveShowsForMovie(ref cmd, movieName);
+
+            while (showsReader.Read())
             {
-                return; // Ignore invalid selections
+                show_date_cmb.Items.Add(showsReader[2]);
             }
 
-           
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // reserve button 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // seats combo box 
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //start date combo box
+        private void start_time_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // movies has been selected -> shows are availible 
+            if (movie_names_cmb.SelectedItem != null) { 
+            
+            }
+
         }
         
+        // dates combo box
+        private void show_date_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

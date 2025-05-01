@@ -15,7 +15,7 @@ namespace ODP1_Connected_Start
 {
     public partial class adminForm : Form
     {
-        string ordb = "data source=orcl; user id=hr; password=hr;";
+        string ordb = "data source=orcl; user id=scott; password=tiger;";
         OracleConnection conn;
 
         public adminForm()
@@ -166,11 +166,13 @@ namespace ODP1_Connected_Start
             //cmd.Parameters.Add("name", comboBox3.Text);
         }
 
+        // add movies button
         private void button1_Click_1(object sender, EventArgs e)
         {
             panel1.BringToFront();
         }
 
+        // add show button
         private void button2_Click_1(object sender, EventArgs e)
         {
 
@@ -192,14 +194,22 @@ namespace ODP1_Connected_Start
             panel4.BringToFront();
         }
 
+        // shows button
         private void button11_Click(object sender, EventArgs e)
         {
 
         }
 
+
+        // home button
         private void button6_Click_1(object sender, EventArgs e)
         {
             panel2.BringToFront();
+        }
+
+        private void panel5_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -146,10 +146,11 @@
             this.panel5.Controls.Add(this.comboBox3);
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Location = new System.Drawing.Point(250, 0);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(740, 595);
             this.panel5.TabIndex = 20;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint_1);
             // 
             // button9
             // 
@@ -424,6 +425,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label5);
@@ -593,7 +595,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 597);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);

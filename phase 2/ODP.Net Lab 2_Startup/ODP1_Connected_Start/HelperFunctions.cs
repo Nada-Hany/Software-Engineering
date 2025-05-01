@@ -30,17 +30,11 @@ public class HelperFunctions
                 MessageBox.Show("Database connection is not available.");
                 return -1;
             }
-            //Console.WriteLine(query);
-            //MessageBox.Show(username);
-            //MessageBox.Show(password);
             OracleDataReader reader = cmd.ExecuteReader();
             while (reader.Read()) {
                 return Convert.ToInt32(reader["USERID"]);
             }
-            //using ()
-            //{
-            //    return reader.HasRows ? Convert.ToInt32(reader["USERID"]) : -1;
-            //}
+          
         }
         catch (OracleException ex)
         {
@@ -49,4 +43,34 @@ public class HelperFunctions
         }
         return -1;
     }
+
+    public OracleDataReader RetrieveAllMovies(ref OracleCommand cmd) {
+
+
+        cmd.CommandText = "GetAllMovies";
+        cmd.CommandType = CommandType.StoredProcedure;
+
+        cmd.Parameters.Add("p_movies", OracleDbType.RefCursor, ParameterDirection.Output);
+        if (cmd.Connection.State != ConnectionState.Open)
+            cmd.Connection.Open();
+
+        return cmd.ExecuteReader();
+    }
+
+
+    public OracleDataReader RetrieveShowsForMovie(ref OracleCommand cmd, string movieName) {
+
+        cmd.CommandText = "GetShowsForMovie";
+        cmd.CommandType = CommandType.StoredProcedure;
+
+        cmd.Parameters.Add("p_movie_name", OracleDbType.Varchar2);
+        cmd.Parameters.Add("p_shows_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
+
+
+        if (cmd.Connection.State != ConnectionState.Open)
+            cmd.Connection.Open();
+
+        return cmd.ExecuteReader();
+    }
+
 }
