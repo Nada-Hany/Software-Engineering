@@ -9,8 +9,8 @@ namespace ODP1_Connected_Start
 {
     public partial class MoviesForm : Form
     {
-        //private string ordb = "data source=orcl; user id=hr; password=hr;";
-        private string ordb = "data source=orcl; user id=scott; password=tiger;";
+        private string ordb = "data source=orcl; user id=hr; password=hr;";
+        //private string ordb = "data source=orcl; user id=scott; password=tiger;";
         private OracleConnection conn;
         private int userID;
         HelperFunctions helper;

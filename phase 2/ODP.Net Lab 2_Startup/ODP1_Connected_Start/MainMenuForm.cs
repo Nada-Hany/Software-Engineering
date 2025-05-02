@@ -53,5 +53,12 @@ namespace ODP1_Connected_Start
             this.Hide(); // Hide LoginForm
             reportform.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoginForm backToLogin = new LoginForm();
+            this.Hide(); // Hide LoginForm
+            backToLogin.Show();
+        }
     }
 }

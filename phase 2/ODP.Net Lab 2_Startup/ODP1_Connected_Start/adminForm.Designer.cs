@@ -29,16 +29,10 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -73,9 +67,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -84,7 +77,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Controls.Add(this.button11);
+            this.panel3.Controls.Add(this.button9);
+            this.panel3.Controls.Add(this.button12);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
@@ -94,16 +88,16 @@
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // button11
+            // button12
             // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(0, 339);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(244, 64);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Shows";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(0, 335);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(244, 78);
+            this.button12.TabIndex = 7;
+            this.button12.Text = "Show and Update Shows";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button6
             // 
@@ -138,73 +132,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.panel5.Controls.Add(this.button9);
-            this.panel5.Controls.Add(this.label19);
-            this.panel5.Controls.Add(this.comboBox3);
-            this.panel5.Controls.Add(this.label18);
-            this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Location = new System.Drawing.Point(250, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(740, 595);
-            this.panel5.TabIndex = 20;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint_1);
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(380, 129);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(119, 52);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "Filter";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label19.Location = new System.Drawing.Point(185, 109);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(180, 24);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "To filter by movies";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(200, 140);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(148, 33);
-            this.comboBox3.TabIndex = 2;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(241, 51);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(237, 32);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Shows available";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 195);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(633, 327);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
@@ -223,11 +150,11 @@
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button8.Location = new System.Drawing.Point(215, 272);
+            this.button8.Location = new System.Drawing.Point(214, 351);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(312, 90);
             this.button8.TabIndex = 18;
-            this.button8.Text = "Show available  Shows";
+            this.button8.Text = "Show and Update available  Shows";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
@@ -237,7 +164,7 @@
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button5.Location = new System.Drawing.Point(215, 170);
+            this.button5.Location = new System.Drawing.Point(214, 249);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(312, 80);
             this.button5.TabIndex = 17;
@@ -251,7 +178,7 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button4.Location = new System.Drawing.Point(215, 68);
+            this.button4.Location = new System.Drawing.Point(214, 147);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(312, 80);
             this.button4.TabIndex = 16;
@@ -318,7 +245,7 @@
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label15.Location = new System.Drawing.Point(431, 371);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 32);
+            this.label15.Size = new System.Drawing.Size(77, 32);
             this.label15.TabIndex = 11;
             this.label15.Text = "EGP";
             // 
@@ -329,7 +256,7 @@
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label14.Location = new System.Drawing.Point(97, 253);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(403, 32);
+            this.label14.Size = new System.Drawing.Size(402, 32);
             this.label14.TabIndex = 10;
             this.label14.Text = "Choose day and time to start";
             // 
@@ -340,7 +267,7 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label13.Location = new System.Drawing.Point(86, 368);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(200, 32);
+            this.label13.Size = new System.Drawing.Size(199, 32);
             this.label13.TabIndex = 9;
             this.label13.Text = "Price of ticket";
             // 
@@ -396,7 +323,7 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label12.Location = new System.Drawing.Point(86, 198);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(463, 32);
+            this.label12.Size = new System.Drawing.Size(462, 32);
             this.label12.TabIndex = 3;
             this.label12.Text = "Number of seats will be available";
             // 
@@ -528,7 +455,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(97, 286);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 32);
+            this.label4.Size = new System.Drawing.Size(157, 32);
             this.label4.TabIndex = 21;
             this.label4.Text = "Movie Rate";
             // 
@@ -539,7 +466,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(97, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 32);
+            this.label3.Size = new System.Drawing.Size(122, 32);
             this.label3.TabIndex = 20;
             this.label3.Text = "Duration";
             // 
@@ -566,7 +493,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(97, 179);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 32);
+            this.label2.Size = new System.Drawing.Size(172, 32);
             this.label2.TabIndex = 17;
             this.label2.Text = "Movie Name";
             // 
@@ -589,23 +516,30 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "ADD MOVIE";
             // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(0, 487);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(244, 78);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "Logout";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 597);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
             this.Name = "adminForm";
             this.Text = "adminForm";
             this.Load += new System.EventHandler(this.addMovies_Load);
             this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -618,16 +552,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button5;
@@ -662,5 +587,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button9;
     }
 }

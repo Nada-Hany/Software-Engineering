@@ -16,7 +16,8 @@ namespace ODP1_Connected_Start
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
-            //Application.Run(new adminForm()); 
+            //Application.Run(new disconnectedForm_admin());
+            //Application.Run(new adminForm());
             //Application.Run(new MoviesForm());
         }
     }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
@@ -15,8 +16,8 @@ namespace ODP1_Connected_Start
 {
     public partial class adminForm : Form
     {
-        //string ordb = "data source=orcl; user id=hr; password=hr;";
-        string ordb = "data source=orcl; user id=scott; password=tiger;";
+        string ordb = "data source=orcl; user id=hr; password=hr;";
+        //string ordb = "data source=orcl; user id=scott; password=tiger;";
         OracleConnection conn;
 
         public adminForm()
@@ -42,22 +43,6 @@ namespace ODP1_Connected_Start
             dr.Close();
             panel2.BringToFront();
 
-
-            //OracleCommand cmd2 = new OracleCommand();
-            //cmd2.Connection = conn;
-            //cmd2.CommandText = "select MovieID from Movies";
-            //cmd2.CommandType = CommandType.Text;
-
-            //OracleDataReader dr2 = cmd2.ExecuteReader();
-            
-            //while (dr2.Read())
-            //{
-            //    comboBox2.Items.Add(dr2[0]);
-            //    MessageBox.Show("cat inserted successfully!");
-            //}
-            //dr2.Close();
-
-
         }
 
     
@@ -72,8 +57,6 @@ namespace ODP1_Connected_Start
         }
 
     
-    
-
     
    
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -110,28 +93,10 @@ namespace ODP1_Connected_Start
 
         private void button8_Click_1(object sender, EventArgs e)
         {
+            disconnectedForm_admin updateForm = new disconnectedForm_admin();
+            //this.Hide();
+            updateForm.Show();
 
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn;
-            cmd.CommandText = "select MovieName from Movies";
-            cmd.CommandType = CommandType.Text;
-
-            OracleDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                comboBox3.Items.Add(dr[0]);
-              //  MessageBox.Show("show shows inserted successfully!");
-            }
-            dr.Close();
-
-            string sql = "SELECT * FROM Shows"; //WHERE ShowDayDate = TRUNC(SYSDATE) AND startTime <= SYSTIMESTAMP
-
-            OracleCommand cmdd = new OracleCommand(sql);
-            OracleDataAdapter adapter = new OracleDataAdapter(cmdd);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            dataGridView1.DataSource = dt;
-            panel5.BringToFront();
         }
 
       
@@ -200,12 +165,7 @@ namespace ODP1_Connected_Start
             panel4.BringToFront();
         }
 
-        // shows button
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
+    
 
         // home button
         private void button6_Click_1(object sender, EventArgs e)
@@ -238,6 +198,31 @@ namespace ODP1_Connected_Start
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            disconnectedForm_admin updateForm = new disconnectedForm_admin();
+            updateForm.Show();
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            disconnectedForm_admin updateForm = new disconnectedForm_admin();
+            //this.Hide();
+            updateForm.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            LoginForm backToLogin = new LoginForm();
+            this.Hide(); 
+            backToLogin.Show();
         }
     }
 }
