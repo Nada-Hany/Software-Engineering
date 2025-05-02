@@ -35,33 +35,33 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(223, 104);
+            this.button1.Location = new System.Drawing.Point(213, 98);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 40);
+            this.button1.Size = new System.Drawing.Size(141, 45);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Pick a movie";
+            this.button1.Text = "Reserve a Movie";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(223, 237);
+            this.button2.Location = new System.Drawing.Point(213, 172);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 40);
+            this.button2.Size = new System.Drawing.Size(141, 45);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Report ";
+            this.button2.Text = "Categories Report";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(223, 170);
+            this.button3.Location = new System.Drawing.Point(213, 242);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 40);
+            this.button3.Size = new System.Drawing.Size(141, 45);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Change Movies";
+            this.button3.Text = "Shows Report";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // MainMenuForm
             // 

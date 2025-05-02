@@ -59,6 +59,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -72,7 +73,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -170,7 +170,7 @@
             this.label19.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label19.Location = new System.Drawing.Point(185, 109);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(175, 22);
+            this.label19.Size = new System.Drawing.Size(180, 24);
             this.label19.TabIndex = 3;
             this.label19.Text = "To filter by movies";
             // 
@@ -189,7 +189,7 @@
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(241, 51);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(236, 32);
+            this.label18.Size = new System.Drawing.Size(237, 32);
             this.label18.TabIndex = 1;
             this.label18.Text = "Shows available";
             // 
@@ -215,6 +215,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(740, 595);
             this.panel2.TabIndex = 21;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button8
             // 
@@ -317,7 +318,7 @@
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label15.Location = new System.Drawing.Point(431, 371);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 32);
+            this.label15.Size = new System.Drawing.Size(78, 32);
             this.label15.TabIndex = 11;
             this.label15.Text = "EGP";
             // 
@@ -328,7 +329,7 @@
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label14.Location = new System.Drawing.Point(97, 253);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(402, 32);
+            this.label14.Size = new System.Drawing.Size(403, 32);
             this.label14.TabIndex = 10;
             this.label14.Text = "Choose day and time to start";
             // 
@@ -339,7 +340,7 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label13.Location = new System.Drawing.Point(86, 368);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(199, 32);
+            this.label13.Size = new System.Drawing.Size(200, 32);
             this.label13.TabIndex = 9;
             this.label13.Text = "Price of ticket";
             // 
@@ -395,7 +396,7 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label12.Location = new System.Drawing.Point(86, 198);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(462, 32);
+            this.label12.Size = new System.Drawing.Size(463, 32);
             this.label12.TabIndex = 3;
             this.label12.Text = "Number of seats will be available";
             // 
@@ -443,6 +444,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(740, 592);
             this.panel1.TabIndex = 23;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Window;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.DarkBlue;
+            this.button3.Location = new System.Drawing.Point(262, 487);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(215, 46);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Add Movie to Cinema DB";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label8
             // 
@@ -513,7 +528,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(97, 286);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 32);
+            this.label4.Size = new System.Drawing.Size(158, 32);
             this.label4.TabIndex = 21;
             this.label4.Text = "Movie Rate";
             // 
@@ -524,7 +539,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(97, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 32);
+            this.label3.Size = new System.Drawing.Size(123, 32);
             this.label3.TabIndex = 20;
             this.label3.Text = "Duration";
             // 
@@ -551,7 +566,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(97, 179);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 32);
+            this.label2.Size = new System.Drawing.Size(173, 32);
             this.label2.TabIndex = 17;
             this.label2.Text = "Movie Name";
             // 
@@ -573,20 +588,6 @@
             this.label1.Size = new System.Drawing.Size(201, 38);
             this.label1.TabIndex = 15;
             this.label1.Text = "ADD MOVIE";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Window;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button3.Location = new System.Drawing.Point(262, 487);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(215, 46);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Add Movie to Cinema DB";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // adminForm
             // 
