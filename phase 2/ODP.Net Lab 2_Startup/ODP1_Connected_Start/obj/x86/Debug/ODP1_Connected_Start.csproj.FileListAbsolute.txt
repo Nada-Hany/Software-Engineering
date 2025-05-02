@@ -87,6 +87,7 @@ C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected
 C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\bin\Debug\stdole.dll
-C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.csproj.CopyComplete
 C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.Form1.resources
+C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.csproj.CopyComplete
+C:\programming\Software-Engineering\phase 2\ODP.Net Lab 2_Startup\ODP1_Connected_Start\obj\x86\Debug\ODP1_Connected_Start.Form2.resources

@@ -9,20 +9,22 @@ namespace ODP1_Connected_Start
 {
     public partial class MoviesForm : Form
     {
-        private string ordb = "data source=orcl; user id=hr; password=hr;";
-        //private string ordb = "data source=orcl; user id=scott; password=tiger;";
+        //private string ordb = "data source=orcl; user id=hr; password=hr;";
+        private string ordb = "data source=orcl; user id=scott; password=tiger;";
         private OracleConnection conn;
         private int userID;
         HelperFunctions helper;
         DataTable dt;
         OracleDataReader showsReader;
+        int movieIdSelected = -1;
+
         public MoviesForm(int userID)
         {
             InitializeComponent();
             conn = new OracleConnection(ordb);
             conn.Open();
             this.userID = userID;
-            category_txt.Hide();
+
         }
         public MoviesForm()
         {
@@ -44,12 +46,9 @@ namespace ODP1_Connected_Start
             
             dt.Load(dr);
             dataGridView1.DataSource = dt;
-            dataGridView1.ReadOnly = true;
+          //  dataGridView1.ReadOnly = true;
 
-            // filling movie name in a combo box 
-            foreach (DataRow row in dt.Rows)
-                movie_names_cmb.Items.Add(row[1].ToString());
-
+  
             dr.Close();
         }
 
@@ -73,27 +72,6 @@ namespace ODP1_Connected_Start
             return cat;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            category_txt.Show();
-            string movieName = movie_names_cmb.SelectedItem?.ToString();
-            if (!string.IsNullOrEmpty(movieName))
-            {
-                category_txt.Text += getCategorySelected(movieName);
-            }
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn;
-
-
-            showsReader = helper.RetrieveShowsForMovie(ref cmd, movieName);
-
-            while (showsReader.Read())
-            {
-               // MessageBox.Show(showsReader[2]);
-                show_date_cmb.Items.Add(showsReader[2].ToString());
-            }
-
-        }
 
         private void label18_Click(object sender, EventArgs e)
         {
@@ -107,37 +85,40 @@ namespace ODP1_Connected_Start
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        // seats combo box 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //start date combo box
-        private void start_time_cmb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // movies has been selected -> shows are availible 
-            if (movie_names_cmb.SelectedItem != null) { 
-            
-            }
-
-        }
-        
-        // dates combo box
-        private void show_date_cmb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+            this.movieIdSelected = Convert.ToInt32(row.Cells["MOVIEID"].Value);
 
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+
+        //   MessageBox.Show(this.movieIdSelected.ToString());
+
+            showsReader = helper.RetrieveShowsForMovie(ref cmd, this.movieIdSelected);
+
+            DataTable showsData;
+            showsData = new DataTable();
+
+            showsData.Load(showsReader);
+            showsGrid.DataSource = showsData;
+
+
+            showsReader.Close();
+
+        }
+
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = showsGrid.Rows[e.RowIndex];
+            int showID = Convert.ToInt32(row.Cells[0].Value);
+
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+
+            show_price.Text = "Shows Price is: " + helper.getShowPrice(ref cmd, showID);
         }
     }
 }

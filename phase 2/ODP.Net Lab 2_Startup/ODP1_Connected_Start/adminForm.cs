@@ -15,8 +15,8 @@ namespace ODP1_Connected_Start
 {
     public partial class adminForm : Form
     {
-        string ordb = "data source=orcl; user id=hr; password=hr;";
-        //string ordb = "data source=orcl; user id=scott; password=tiger;";
+        //string ordb = "data source=orcl; user id=hr; password=hr;";
+        string ordb = "data source=orcl; user id=scott; password=tiger;";
         OracleConnection conn;
 
         public adminForm()
@@ -25,7 +25,6 @@ namespace ODP1_Connected_Start
         }
 
    
-       
 
         private void addMovies_Load(object sender, EventArgs e)
         {
@@ -38,10 +37,8 @@ namespace ODP1_Connected_Start
 
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
-            {
                 comboBox1.Items.Add(dr[0]);
-                MessageBox.Show("categ inserted successfully!");
-            }
+          
             dr.Close();
             panel2.BringToFront();
 
@@ -123,7 +120,7 @@ namespace ODP1_Connected_Start
             while (dr.Read())
             {
                 comboBox3.Items.Add(dr[0]);
-                MessageBox.Show("show shows inserted successfully!");
+              //  MessageBox.Show("show shows inserted successfully!");
             }
             dr.Close();
 
@@ -237,5 +234,10 @@ namespace ODP1_Connected_Start
             if (r != -1) MessageBox.Show("Movie inserted successfully!");
         
     }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

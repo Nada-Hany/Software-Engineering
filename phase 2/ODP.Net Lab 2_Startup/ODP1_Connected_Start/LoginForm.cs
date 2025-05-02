@@ -13,8 +13,8 @@ namespace ODP1_Connected_Start
 {
     public partial class LoginForm : Form
     {
-        string ordb = "data source=orcl; user id=hr; password=hr;";
-        //string ordb = "data source=orcl; user id=scott; password=tiger;";
+        //string ordb = "data source=orcl; user id=hr; password=hr;";
+        string ordb = "data source=orcl; user id=scott; password=tiger;";
         OracleConnection conn;
         HelperFunctions helper;
         public LoginForm()
@@ -49,9 +49,8 @@ namespace ODP1_Connected_Start
             helper = new HelperFunctions();
             if (username_txt.Text.ToString() == "admin" && password_txt.Text.ToString() == "admin")
             {
-                //MessageBox.Show("admoon", "admoon", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 adminForm admin = new adminForm();
-                this.Hide(); // Hide LoginForm
+                this.Hide(); 
                 admin.Show();
 
             }
@@ -61,7 +60,7 @@ namespace ODP1_Connected_Start
                 if (userID != -1)
                 {
                   //  MoviesForm moviesForm = new MoviesForm(userID);
-                    MainMenuForm mainMenuForm = new MainMenuForm();
+                    MainMenuForm mainMenuForm = new MainMenuForm(userID);
                     this.Hide(); // Hide LoginForm
                     mainMenuForm.Show();
                 }
